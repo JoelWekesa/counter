@@ -1,0 +1,26 @@
+# networks:
+#  app-tier:
+#   driver: bridge
+
+# services:
+#  counter:
+#   build: .
+
+#   ports:
+#    - '5001:5001'
+#   networks:
+#    - app-tier
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  redis:
+    image: 'joelwekesa/counter:1.0.0'
+
+    ports:
+      - '5001:5001'
+    networks:
+      - app-tier
+

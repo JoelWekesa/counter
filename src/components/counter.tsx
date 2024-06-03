@@ -12,7 +12,7 @@ const Counter = () => {
 
 			const diff = now - yearEnd;
 
-			const count = (diff / (24 * 1000 * 60 * 60)) * 10;
+			const count = (diff / (24 * 1000 * 60 * 60));
 			setCount(count);
 			setLoading(false);
 		};
